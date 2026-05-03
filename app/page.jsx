@@ -1,7 +1,7 @@
 "use client"
 import { useState,useEffect } from "react";
 const loginWithGoogle = () => {
-  window.location.href = "http://localhost:9000/auth/google";
+  window.location.href = "https://try-session.vercel.app/auth/google";
 };
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     const checkUser = async() => {
       try {
-        const res = await fetch("http://localhost:9000/me", {
+        const res = await fetch("https://try-session.vercel.app/me", {
           credentials: "include"
         })
         const data = await res.json();
